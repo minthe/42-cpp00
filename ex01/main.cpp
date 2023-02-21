@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 22:28:16 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/19 17:02:23 by vfuhlenb         ###   ########.fr       */
+/*   Created: 2023/02/19 16:19:40 by vfuhlenb          #+#    #+#             */
+/*   Updated: 2023/02/19 17:15:40 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Contact.class.hpp"
 
-int	main(int argc, char **argv)
-{
-	int	word = 0;
+int	main() {
 
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return 0;
-	}
-	while (++word < argc)
-	{
-		for (size_t letter = 0; argv[word][letter]; letter++)
-			std::cout << (char)toupper(argv[word][letter]);
-	}
-	std::cout << std::endl;
+	Contact	new_contact;
+
+	new_contact.foo = 42;
+	std::cout << "new_contact.foo: " << new_contact.foo << std::endl;
+	new_contact.bar();
+
 	return 0;
 }
