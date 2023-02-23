@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/19 17:16:21 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:01:19 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,14 @@ Contact::~Contact( void ) {
 
 	std::cout << "Destructor called" << std::endl;
 	return;
+}
+
+void	Contact::setName( void ){
+	getline(std::cin, this->_name);
+}
+
+std::string	Contact::getName(void) const {
+	return this->_name; 
 }
 
 void	Contact::bar( void ) {
