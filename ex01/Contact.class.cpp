@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/22 14:01:19 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/23 21:05:46 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	Contact::setName( void ){
 }
 
 std::string	Contact::getName(void) const {
-	return this->_name; 
+	return this->_name;
 }
 
 void	Contact::bar( void ) {

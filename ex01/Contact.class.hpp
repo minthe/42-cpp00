@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:21:56 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/22 14:08:16 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/23 21:59:33 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,28 @@ class Contact {
 
 	public:
 
-		Contact( void );
-		~Contact( void );
+		Contact(void);
+		~Contact(void);
 
-		std::string	getName( void ) const;
-		void		setName( void );
-		void		bar( void );
+		std::string	getFirstName(void) const;
+		std::string	getLastName(void) const;
+		std::string	getNickName(void) const;
+		std::string	getPhone(void) const;
+		std::string	getSecret(void) const;
+		void		setFirstName(void);
+		void		setLastName(void);
+		void		setNickName(void);
+		void		setPhone(void);
+		void		setSecret(void);
 
 	private:
 
-		std::string _name;
+		std::string	_firstname;
+		std::string	_lastname;
+		std::string	_nickname;
+		std::string	_phone;
+		std::string	_secret;
+
 };
 
 #endif
