@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/24 12:11:51 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/24 18:17:30 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,15 @@ class PhoneBook {
 		PhoneBook(void);
 		~PhoneBook(void);
 
-		void	run(void);
-		void	getContact(int index) const;
+		void	readme(void);
+		void	add_contact(int index);
+		void	search_contact(void);
+		void	print_contact(int index) const;
+		void	print_contact_row(int index) const;
+		int		getContactNumber(void) const;
 
 	private:
 
-		bool	_full;
 		Contact	_contact_data[8];
 
 };

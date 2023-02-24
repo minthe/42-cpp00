@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:21:56 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/24 10:57:12 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/24 18:24:12 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONTACT_CLASS_H
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 class Contact {
@@ -28,6 +29,7 @@ class Contact {
 		std::string	getNickName(void) const;
 		std::string	getPhone(void) const;
 		std::string	getSecret(void) const;
+		int			getNumber(void) const;
 		void		setFirstName(void);
 		void		setLastName(void);
 		void		setNickName(void);
