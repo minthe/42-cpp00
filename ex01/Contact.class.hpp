@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:21:56 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/23 21:59:33 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/24 10:57:12 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ class Contact {
 
 	private:
 
-		std::string	_firstname;
-		std::string	_lastname;
+		std::string	_first_name;
+		std::string	_last_name;
 		std::string	_nickname;
 		std::string	_phone;
 		std::string	_secret;

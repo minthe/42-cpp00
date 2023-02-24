@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/23 22:47:50 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/24 12:11:51 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class PhoneBook {
 		PhoneBook(void);
 		~PhoneBook(void);
 
-		void 	run(void);
-		int		getValue(void) const;
+		void	run(void);
+		void	getContact(int index) const;
 
 	private:
 
