@@ -4,7 +4,13 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-SRCS = main.cpp PhoneBook.class.cpp Contact.class.cpp
+SRCS_PATH = $(PWD)
+
+SRCS_FILES =	$(shell ls ./ | grep .cpp$)
+
+SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_FILES))
+
+OBJS = ${SRCS:.cpp=.o}
 
 RM = rm -f
 
@@ -15,7 +21,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
-	@echo "Success, executable ./$(NAME) created."
+	@echo "\033[32mprogram\033[32;1m ./$(NAME) \033[0m\033[32mcompiled\033[0m"
 
 all: $(NAME)
 
@@ -24,7 +30,7 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "Success, directory cleaned."
+	@echo "\033[32mdirectory cleaned\033[0m"
 
 re: fclean all
 

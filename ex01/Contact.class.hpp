@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:21:56 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/25 15:17:18 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:51:34 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,28 @@ class Contact {
 
 	public:
 
-		Contact(void);
-		~Contact(void);
+		Contact();
+		~Contact();
 
-		std::string	getFirstName(void) const;
-		std::string	getLastName(void) const;
-		std::string	getNickName(void) const;
-		std::string	getPhone(void) const;
-		std::string	getSecret(void) const;
-		int			getNumber(void) const;
-		bool		setFirstName(void);
-		bool		setLastName(void);
-		bool		setNickName(void);
-		bool		setPhone(void);
-		bool		setSecret(void);
+		std::string	getFirstName() const;
+		std::string	getLastName() const;
+		std::string	getNickName() const;
+		std::string	getPhone() const;
+		std::string	getSecret() const;
+		int			getNumber() const;
+		bool		setFirstName();
+		bool		setLastName();
+		bool		setNickName();
+		bool		setPhone();
+		bool		setSecret();
 
 	private:
 
-		std::string					_first_name;
-		std::string					_last_name;
-		std::string					_nickname;
-		std::string					_phone;
-		std::string					_secret;
+		std::string	_first_name;
+		std::string	_last_name;
+		std::string	_nickname;
+		std::string	_phone;
+		std::string	_secret;
 
 };
 

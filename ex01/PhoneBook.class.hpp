@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/25 16:54:36 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:57:46 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,37 +19,44 @@ class PhoneBook {
 
 	public:
 
-		PhoneBook(void);
-		~PhoneBook(void);
+		PhoneBook();
+		~PhoneBook();
 
-		// ADD
 		void	add_contact(int index);
-		void	add_first_name(int index);
-		void	add_last_name(int index);
-		void	add_nickname(int index);
-		void	add_phone(int index);
-		void	add_secret(int index);
-
-		// SEARCH
-		void	search_contact(void);
-		void	print_contact(int index) const;
-		void	print_contact_row(int index) const;
+		int		search_contacts();
 
 		// Utils
-		void	print_text(std::string str, std::string color) const;
-		void	welcome_message(void) const;
-		void	print_invalid_message(void) const;
+		void	print_welcome_message() const;
+		void	print_invalid_message() const;
 		void	print_success_message(int index) const;
-		void	print_options(void) const;
-		void	print_exit_message(void) const;
+		void	print_options() const;
+		void	print_exit_message() const;
 
 	private:
+
+		// ADD
+		void	_add_first_name(int index);
+		void	_add_last_name(int index);
+		void	_add_nickname(int index);
+		void	_add_phone(int index);
+		void	_add_secret(int index);
+
+		// SEARCH
+		int			_select_contact();
+		void		_print_contact(int index) const;
+		void		_print_contact_list_header() const;
+		void		_print_contact_list(int index) const;
+
+		// UTILS
+		void		_print_text(std::string str, std::string color) const;
 
 		Contact						_contact_data[8];
 		static const short			_REVISION;
 		static const std::string	_COLOR_STD;
 		static const std::string	_COLOR_WARNING;
 		static const std::string	_COLOR_SUCCESS;
+		static const std::string	_COLOR_RESET;
+		int							_number;
 };
 
 #endif

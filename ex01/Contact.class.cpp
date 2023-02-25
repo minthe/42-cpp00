@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/25 16:37:37 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:45:35 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,55 +15,65 @@
 Contact::Contact(void) {}
 Contact::~Contact(void) {}
 
-std::string	Contact::getFirstName(void) const {
+std::string	Contact::getFirstName(void) const
+{
 	return this->_first_name;
 }
 
-std::string	Contact::getLastName(void) const {
+std::string	Contact::getLastName(void) const
+{
 	return this->_last_name;
 }
 
-std::string	Contact::getNickName(void) const {
+std::string	Contact::getNickName(void) const
+{
 	return this->_nickname;
 }
 
-std::string	Contact::getPhone(void) const {
+std::string	Contact::getPhone(void) const
+{
 	return this->_phone;
 }
 
-std::string	Contact::getSecret(void) const {
+std::string	Contact::getSecret(void) const
+{
 	return this->_secret;
 }
 
-bool	Contact::setFirstName(void){
+bool	Contact::setFirstName(void)
+{
 	std::getline(std::cin, this->_first_name);
 	if (this->_first_name.size() == 0)
 		return (false);
 	return (true);
 }
 
-bool	Contact::setLastName(void){
+bool	Contact::setLastName(void)
+{
 	std::getline(std::cin, this->_last_name);
 	if (this->_last_name.size() == 0)
 		return (false);
 	return (true);
 }
 
-bool	Contact::setNickName(void){
+bool	Contact::setNickName(void)
+{
 	std::getline(std::cin, this->_nickname);
 	if (this->_nickname.size() == 0)
 		return (false);
 	return (true);
 }
 
-bool	Contact::setPhone(void){
-	std::getline(std::cin, this->_last_name);
-	if (this->_last_name.size() == 0)
+bool	Contact::setPhone(void)
+{
+	std::getline(std::cin, this->_phone);
+	if (this->_phone.size() == 0)
 		return (false);
 	return (true);
 }
 
-bool	Contact::setSecret(void){
+bool	Contact::setSecret(void)
+{
 	std::getline(std::cin, this->_secret);
 	if (this->_secret.size() == 0)
 		return (false);
