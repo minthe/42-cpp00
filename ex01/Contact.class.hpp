@@ -6,10 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:21:56 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 14:10:00 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:50:50 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef CONTACT_CLASS_H
 # define CONTACT_CLASS_H
 

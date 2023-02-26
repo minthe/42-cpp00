@@ -6,10 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 14:12:00 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:50:56 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef PHONEBOOK_CLASS_H
 # define PHONEBOOK_CLASS_H
 
