@@ -6,11 +6,12 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/25 21:45:35 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:11:45 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
+#include <iostream>
 
 Contact::Contact(void) {}
 Contact::~Contact(void) {}

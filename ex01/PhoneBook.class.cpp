@@ -6,14 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:02 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 13:23:01 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:11:41 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.class.hpp"
-#include <iostream>
-#include <iomanip>
-#include <string>
 
 PhoneBook::PhoneBook(void) : _number(0) {}
 PhoneBook::~PhoneBook(void) {}

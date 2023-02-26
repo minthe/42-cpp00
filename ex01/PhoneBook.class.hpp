@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 13:23:05 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:12:00 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PHONEBOOK_CLASS_H
 
 #include "Contact.class.hpp"
+#include <iostream>
+#include <iomanip>
 
 class PhoneBook {
 

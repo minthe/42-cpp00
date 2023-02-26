@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:21:56 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/25 21:51:34 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:10:00 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define CONTACT_CLASS_H
 
 #include <iostream>
-#include <iomanip>
-#include <string>
 
 class Contact {
 
