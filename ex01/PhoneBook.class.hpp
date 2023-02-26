@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/25 21:57:46 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 13:23:05 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,11 @@ class PhoneBook {
 		// SEARCH
 		int			_select_contact();
 		void		_print_contact(int index) const;
-		void		_print_contact_list_header() const;
-		void		_print_contact_list(int index) const;
+		void		_print_contact_list_header();
+		void		_print_contact_list(int index);
 
 		// UTILS
+		std::string	_conform_value(std::string str);
 		void		_print_text(std::string str, std::string color) const;
 
 		Contact						_contact_data[8];

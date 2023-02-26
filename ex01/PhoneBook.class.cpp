@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:02 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/25 21:57:39 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 13:23:01 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,7 +149,7 @@ void	PhoneBook::_print_contact(int index) const
 	return;
 }
 
-void	PhoneBook::_print_contact_list_header() const
+void	PhoneBook::_print_contact_list_header()
 {
 	this->_print_text("\nContact List\n", _COLOR_STD);
 	std::cout
@@ -170,7 +170,7 @@ void	PhoneBook::_print_contact_list_header() const
 	return;
 }
 
-void	PhoneBook::_print_contact_list(int index) const
+void	PhoneBook::_print_contact_list(int index)
 {
 	std::cout
 		<< _COLOR_STD
@@ -180,33 +180,14 @@ void	PhoneBook::_print_contact_list(int index) const
 	else
 		std::cout << std::setw(10) << index;
 	std::cout << "|";
-	if (this->_contact_data[index].getFirstName().length() > (size_t)10)
-		std::cout << std::setw(10) << this->_contact_data[index].getFirstName().substr(0,9).append(".") << "|";
-	else
-		std::cout << std::setw(10) << this->_contact_data[index].getFirstName() << "|";
-	if (this->_contact_data[index].getLastName().length() > (size_t)10)
-		std::cout << std::setw(10) << this->_contact_data[index].getLastName().substr(0,9).append(".") << "|";
-	else
-		std::cout << std::setw(10) << this->_contact_data[index].getLastName() << "|";
-	if (this->_contact_data[index].getNickName().length() > (size_t)10)
-		std::cout << std::setw(10) << this->_contact_data[index].getNickName().substr(0,9).append(".") << "|";
-	else
-		std::cout << std::setw(10) << this->_contact_data[index].getNickName() << "|";
+	std::cout << std::setw(10) << this->_conform_value(this->_contact_data[index].getFirstName()) << "|";
+	std::cout << std::setw(10) << this->_conform_value(this->_contact_data[index].getLastName()) << "|";
+	std::cout << std::setw(10) << this->_conform_value(this->_contact_data[index].getNickName()) << "|";
 	std::cout << _COLOR_RESET << std::endl;
 	return;
 }
 
 // UTILS ---------------------------------------------------------------- UTILS
-
-void	PhoneBook::_print_text(std::string str, std::string color) const
-{
-	std::cout
-		<< color
-		<< str
-		<< _COLOR_RESET
-	<< std::endl;
-	return;
-}
 
 void	PhoneBook::print_welcome_message(void) const
 {
@@ -246,6 +227,23 @@ void	PhoneBook::print_options(void) const
 void	PhoneBook::print_exit_message(void) const
 {
 	this->_print_text("PhoneBook closed", _COLOR_WARNING);
+}
+
+std::string	PhoneBook::_conform_value(std::string str)
+{
+	if (str.length() > (size_t)10)
+		return (str.substr(0,9).append("."));
+	return (str);
+}
+
+void	PhoneBook::_print_text(std::string str, std::string color) const
+{
+	std::cout
+		<< color
+		<< str
+		<< _COLOR_RESET
+	<< std::endl;
+	return;
 }
 
 const short	PhoneBook::_REVISION = 1;
