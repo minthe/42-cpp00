@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 19:22:02 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 14:11:41 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/27 19:55:41 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,6 @@ int	PhoneBook::search_contacts(void)
 int	PhoneBook::_select_contact()
 {
 	std::string input;
-	char		*inval;
 	
 	this->_print_text("\nEnter index to show contact details...", _COLOR_STD);
 	std::getline(std::cin, input);
@@ -113,10 +112,9 @@ int	PhoneBook::_select_contact()
 		this->_print_text("Not a valid input (enter a digit between 0-7)", _COLOR_WARNING);
 		return (this->search_contacts());
 	}
-	this->_number = (int)strtol(input.c_str(), &inval, 10);
-	if (this->_number > -1 && this->_number < 8 && !*inval)
+	if (input.length() == 1 && input[0] >= 48 && input[0] <= 55)
 	{
-		this->_number = std::stoi(input);
+		this->_number = input[0] - 48;
 		if (this->_number >= 0 && this->_number < 8 && !std::cin.eof() && (this->_contact_data[this->_number].getFirstName().compare("") != 0))
 		{
 			this->_print_contact(this->_number);
